@@ -1,14 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.csc_325.SignupView"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="608.0" prefWidth="558.0" styleClass="anchor_pane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csc_325.signupViewController">
+   <children>
+      <GridPane layoutX="86.0" prefHeight="530.0" prefWidth="386.0" styleClass="anchor_pane">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="122.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="107.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="114.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="157.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="167.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="93.0" minHeight="0.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="103.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="103.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="30.0" prefWidth="417.0" text="                             Signup" textAlignment="CENTER">
+               <font>
+                  <Font size="25.0" />
+               </font></Label>
+            <TextField prefHeight="34.0" prefWidth="386.0" promptText="Email" GridPane.rowIndex="1" />
+            <TextField prefHeight="34.0" prefWidth="386.0" promptText="Create password" GridPane.rowIndex="2" />
+            <TextField prefHeight="34.0" prefWidth="386.0" promptText="Confirm password" GridPane.rowIndex="3" />
+            <Button fx:id="btn_signUp" mnemonicParsing="false" onAction="#change" prefHeight="26.0" prefWidth="404.0" styleClass="nav_btn" text="Signup" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#change" prefHeight="26.0" prefWidth="445.0" styleClass="nav_btn2" text="Login with Google" textFill="#141414" GridPane.rowIndex="7" />
+            <Label prefHeight="17.0" prefWidth="345.0" text="                                            Already have an account? " GridPane.rowIndex="5" />
+            <AnchorPane GridPane.rowIndex="7">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@google.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </AnchorPane>
+            <GridPane prefHeight="26.0" prefWidth="240.0" GridPane.rowIndex="5">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <AnchorPane>
+                     <children>
+                        <Hyperlink layoutX="258.0" layoutY="5.0" onAction="#change" text="Login" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+            <Label prefHeight="17.0" prefWidth="395.0" text="                                                                     Or" textFill="GREY" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+   </children>
+    <stylesheets>
+        <URL value="@style.css" />
+        <URL value="@../../../../../styling/style.css" />
+    </stylesheets>
 </AnchorPane>

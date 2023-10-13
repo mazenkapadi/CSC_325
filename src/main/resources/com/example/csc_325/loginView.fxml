@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="407.0" prefWidth="228.0" style="-fx-background-color: DodgerBlue;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="182.0" fitWidth="228.0" layoutY="115.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@loginbackground.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="356.0" style="-fx-background-color: #B3E2FF;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="157.0" layoutY="63.0" text="Email:" />
+            <TextField layoutX="47.0" layoutY="99.0" prefHeight="31.0" prefWidth="259.0" />
+            <Label layoutX="143.0" layoutY="149.0" text="Password:" />
+            <PasswordField layoutX="47.0" layoutY="185.0" prefHeight="31.0" prefWidth="259.0" />
+            <Button layoutX="48.0" layoutY="225.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="259.0" style="-fx-background-color: LightSkyBlue;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Hyperlink layoutX="114.0" layoutY="256.0" prefHeight="29.0" prefWidth="128.0" text="Forgot Password?" textAlignment="CENTER" />
+            <Button alignment="BASELINE_RIGHT" layoutX="84.0" layoutY="295.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="190.0" style="-fx-background-color: white;" text="Login with Google" textAlignment="RIGHT">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@googlelogo.jpg" />
+                     </image></ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
